@@ -11,6 +11,7 @@
   Rooms List
   <table>
     <tr>
+      <th>Index</th>
       <th>Even/Odd</th>
       <th>Room Number</th>
       <th>Room Type</th>
@@ -19,7 +20,8 @@
       <th>Check-in Time</th>
       <!-- <th>Checkout Time</th> -->
     </tr>
-    <tr *ngFor="let room of roomList; let e = even; let o = odd">
+    <tr *ngFor="let room of roomList; let e = even; let o = odd; let i = index">
+      <td>{{ i }}</td>
       <td>{{ e ? "Even" : "Odd" }}</td>
       <td>{{ room.roomNumber }}</td>
       <td>{{ room.roomType }}</td>
