@@ -1,27 +1,48 @@
-# HotelInventoryApp
+# Hotel Inventory App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+An in-depth course on TypeScript and Angular from Free Code Camp.
 
-## Development server
+Directives
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- ngIf
+- ngFor
+- ngSwitch
+- ngClass
+- ngStyle
 
-## Code scaffolding
+Pipes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Pipes are used for data transformation.
+- Pipes don't change actual object.
 
-## Build
+Built-in Pipes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- DatePipe
+- UpperCasePipe
+- LowerCasePipe
+- TitleCasePipe
+  - Capitalizes first letter of each word.
+- CurrencyPipe
+  - default: USD. Can also declare others, ex: currency: 'EUR';
+- DecimalPipe
+  - actual pipe name: number
+- PercentPipe
+- JsonPipe
+  - great for displaying data during development. Don't use for production purposes.
+- SlicePipe
+  - common use case: pagination. Don't use for pagination when working with large data set where the numbers might change. Rely on server side pagination or filtering.
+- AsyncPipe
 
-## Running unit tests
+Lifecycle Hooks
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- component instance has lifecycle hooks which can help you to hook into different events on Components.
+- Lifecycle ends when component is destroyed.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- ngOnChanges
+- ngOnInit
+- ngDoCheck
+- ngAfterContentInit
+- ngAfterContentChecked
+- ngAfterViewInit
+- ngAfterViewChecked
+- ngOnDestroy
