@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { Room, RoomList } from './rooms';
 
 @Component({
@@ -18,6 +18,8 @@ export class RoomsComponent implements OnInit {
   rooms: Room = { totalRooms: 20, availableRooms: 10, bookedRooms: 5 };
 
   roomList: RoomList[] = [];
+
+  title = 'Room List';
 
   constructor() {}
 
@@ -56,11 +58,31 @@ export class RoomsComponent implements OnInit {
     ];
   }
 
+  ngDoCheck() {
+    console.log('on changes is called');
+  }
+
   toggle() {
     this.hideRooms = !this.hideRooms;
+    this.title = 'Rooms List';
   }
 
   selectRoom(room: RoomList) {
     this.selectedRoom = room;
+  }
+
+  addRoom() {
+    const room: RoomList = {
+      roomNumber: 104,
+      roomType: 'Deluxe Room',
+      amenities: 'Air Conditioner, Free Wi-Fi, TV, Bathroom, Kitchen',
+      price: 15000,
+      photos: 'https://unsplash.com/photos/Yrxr3bsPdS0',
+      checkinTime: new Date('11-Nov-2022'),
+      checkoutTime: new Date('12-Nov-2022'),
+      rating: 4.6,
+    };
+
+    this.roomList = [...this.roomList, room];
   }
 }
