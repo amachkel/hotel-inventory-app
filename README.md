@@ -2,7 +2,7 @@
 
 An in-depth course on TypeScript and Angular from Free Code Camp.
 
-Directives
+## Directives
 
 - ngIf
 - ngFor
@@ -10,7 +10,7 @@ Directives
 - ngClass
 - ngStyle
 
-Pipes
+## Pipes
 
 - Pipes are used for data transformation.
 - Pipes don't change actual object.
@@ -33,7 +33,7 @@ Built-in Pipes
   - common use case: pagination. Don't use for pagination when working with large data set where the numbers might change. Rely on server side pagination or filtering.
 - AsyncPipe
 
-Lifecycle Hooks
+## Lifecycle Hooks
 
 - component instance has lifecycle hooks which can help you to hook into different events on Components.
 - Lifecycle ends when component is destroyed.
@@ -46,3 +46,13 @@ Lifecycle Hooks
 - ngAfterViewInit
 - ngAfterViewChecked
 - ngOnDestroy
+
+## Component Communication
+
+The scenario where two or more components need(s) to interact. There are multiple ways to achieve the component communication.
+
+Ways for Component interaction:
+
+- Using @Input and @OutPut
+- Using @ViewChild and @ContentChild
+- Using Services
