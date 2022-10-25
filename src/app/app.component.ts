@@ -2,7 +2,8 @@ import {
   Component,
   AfterViewInit,
   ViewChild,
-  ViewContainerRef,
+  OnInit,
+  ElementRef,
 } from '@angular/core';
 import { RoomsComponent } from './rooms/rooms.component';
 
@@ -11,12 +12,19 @@ import { RoomsComponent } from './rooms/rooms.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit {
+  ngAfterViewInit(): void {
+    throw new Error('Method not implemented.');
+  }
   title = 'hotel Inventory App';
 
-  @ViewChild('user', { read: ViewContainerRef }) vcr!: ViewContainerRef;
+  @ViewChild('name', { static: true }) name!: ElementRef;
 
-  ngAfterViewInit(): void {
-    const componentRef = this.vcr.createComponent(RoomsComponent);
+  ngOnInit() {
+    this.name.nativeElement.innerText = 'Hilton Hotel';
   }
+  // @ViewChild('user', { read: ViewContainerRef }) vcr!: ViewContainerRef;
+  //   ngAfterViewInit(): void {
+  //     const componentRef = this.vcr.createComponent(RoomsComponent);
+  //   }
 }
