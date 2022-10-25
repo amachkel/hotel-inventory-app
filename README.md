@@ -54,5 +54,9 @@ The scenario where two or more components need(s) to interact. There are multipl
 Ways for Component interaction:
 
 - Using @Input and @OutPut
+  - These make components reusable
 - Using @ViewChild and @ContentChild
+  - @ViewChild creates a new instance of component
 - Using Services
+
+Where I Left Off: (5:42:01) ViewChild, ViewChildren and AfterViewInit
